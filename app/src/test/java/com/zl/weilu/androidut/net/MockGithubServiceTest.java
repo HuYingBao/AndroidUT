@@ -63,7 +63,7 @@ public class MockGithubServiceTest {
 
     @Test
     public void getUserTest() throws Exception {
-        mockGithubService.getUser("weilu")
+        mockGithubService.getUser("weiluq")
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<User>() {

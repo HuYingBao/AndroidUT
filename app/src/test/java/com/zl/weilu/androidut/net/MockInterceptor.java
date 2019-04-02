@@ -17,10 +17,10 @@ import okhttp3.ResponseBody;
  */
 public class MockInterceptor implements Interceptor {
 
-    private final String responeJsonPath;
+    private final String mResponseJsonPath;
 
-    public MockInterceptor(String responeJsonPath) {
-        this.responeJsonPath = responeJsonPath;
+    public MockInterceptor(String mResponseJsonPath) {
+        this.mResponseJsonPath = mResponseJsonPath;
     }
 
     @Override
@@ -59,7 +59,7 @@ public class MockInterceptor implements Interceptor {
     }
 
     private String getResponseString(String fileName) {
-        return FileUtil.readFile(responeJsonPath + fileName, "UTF-8").toString();
+        return FileUtil.readFile(mResponseJsonPath + fileName, "UTF-8").toString();
     }
 
 }
