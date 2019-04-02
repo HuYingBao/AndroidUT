@@ -1,6 +1,7 @@
 package com.zl.weilu.androidut.dagger;
 
-import com.zl.weilu.androidut.BuildConfig;
+import android.os.Build;
+
 import com.zl.weilu.androidut.MyApp;
 import com.zl.weilu.androidut.dagger.ui.LoginDaggerPresenter;
 import com.zl.weilu.androidut.mvp.ui.LoginMvpView;
@@ -34,7 +35,7 @@ import static org.mockito.Mockito.verify;
  * Created by weilu on 2018/2/6
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 23)
+@Config(sdk = Build.VERSION_CODES.P)
 public class LoginDaggerPresenterTest {
 
     private LoginDaggerPresenter mPresenter;

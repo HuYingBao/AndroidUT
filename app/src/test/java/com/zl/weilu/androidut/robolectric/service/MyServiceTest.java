@@ -1,6 +1,7 @@
 package com.zl.weilu.androidut.robolectric.service;
 
-import com.zl.weilu.androidut.BuildConfig;
+import android.os.Build;
+
 import com.zl.weilu.androidut.service.MyService;
 
 import org.junit.Before;
@@ -18,7 +19,7 @@ import org.robolectric.shadows.ShadowLog;
  * @Time: 2017/12/4 11:40.
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 23)
+@Config(sdk = Build.VERSION_CODES.P)
 public class MyServiceTest {
 
     private ServiceController<MyService> controller;

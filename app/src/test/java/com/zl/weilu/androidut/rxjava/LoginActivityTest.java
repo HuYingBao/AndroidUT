@@ -1,9 +1,9 @@
 package com.zl.weilu.androidut.rxjava;
 
 import android.app.Application;
+import android.os.Build;
 import android.widget.TextView;
 
-import com.zl.weilu.androidut.BuildConfig;
 import com.zl.weilu.androidut.R;
 import com.zl.weilu.androidut.ui.LoginActivity;
 
@@ -27,7 +27,7 @@ import static org.junit.Assert.assertNotNull;
  * @Time: 2018/1/6 15:20.
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 23)
+@Config(sdk = Build.VERSION_CODES.P)
 public class LoginActivityTest {
 
     private LoginActivity loginActivity;

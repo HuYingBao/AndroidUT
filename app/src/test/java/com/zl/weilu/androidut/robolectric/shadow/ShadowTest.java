@@ -1,8 +1,8 @@
 package com.zl.weilu.androidut.robolectric.shadow;
 
+import android.os.Build;
 import android.util.Log;
 
-import com.zl.weilu.androidut.BuildConfig;
 import com.zl.weilu.androidut.bean.Person;
 
 import org.junit.Before;
@@ -21,8 +21,7 @@ import static org.robolectric.shadow.api.Shadow.extract;
  * @Time: 2017/12/4 13:07.
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class,
-        sdk = 23,
+@Config(sdk = Build.VERSION_CODES.P,
         shadows = {ShadowPerson.class})
 public class ShadowTest {
 

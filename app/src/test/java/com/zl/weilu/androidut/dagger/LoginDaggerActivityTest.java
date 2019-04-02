@@ -1,10 +1,10 @@
 package com.zl.weilu.androidut.dagger;
 
 import android.app.Application;
+import android.os.Build;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.zl.weilu.androidut.BuildConfig;
 import com.zl.weilu.androidut.R;
 import com.zl.weilu.androidut.dagger.ui.LoginDaggerActivity;
 import com.zl.weilu.androidut.rxjava.RxJavaTestSchedulerRule;
@@ -37,7 +37,7 @@ import static org.junit.Assert.assertNotNull;
  * Created by weilu on 2018/2/6.
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 23)
+@Config(sdk = Build.VERSION_CODES.P)
 public class LoginDaggerActivityTest {
 
     private LoginDaggerActivity loginActivity;

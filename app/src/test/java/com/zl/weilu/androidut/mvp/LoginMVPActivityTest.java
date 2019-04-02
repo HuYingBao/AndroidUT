@@ -1,10 +1,10 @@
 package com.zl.weilu.androidut.mvp;
 
 import android.app.Application;
+import android.os.Build;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.zl.weilu.androidut.BuildConfig;
 import com.zl.weilu.androidut.R;
 import com.zl.weilu.androidut.mvp.ui.LoginMVPActivity;
 import com.zl.weilu.androidut.rxjava.RxJavaTestSchedulerRule;
@@ -37,7 +37,7 @@ import static org.junit.Assert.assertNotNull;
  * Created by weilu on 2018/1/27.
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 23)
+@Config(sdk = Build.VERSION_CODES.P)
 public class LoginMVPActivityTest {
 
     private LoginMVPActivity loginActivity;

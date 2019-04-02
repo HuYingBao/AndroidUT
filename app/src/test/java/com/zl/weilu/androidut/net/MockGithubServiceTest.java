@@ -1,8 +1,8 @@
 package com.zl.weilu.androidut.net;
 
+import android.os.Build;
 import android.util.Log;
 
-import com.zl.weilu.androidut.BuildConfig;
 import com.zl.weilu.androidut.bean.User;
 
 import org.junit.Before;
@@ -27,7 +27,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 23)
+@Config(sdk = Build.VERSION_CODES.P)
 public class MockGithubServiceTest {
 
     private static final String JSON_ROOT_PATH = "/json/";

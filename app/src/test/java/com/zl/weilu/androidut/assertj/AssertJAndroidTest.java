@@ -1,10 +1,10 @@
 package com.zl.weilu.androidut.assertj;
 
+import android.os.Build;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 
-import com.zl.weilu.androidut.BuildConfig;
 import com.zl.weilu.androidut.R;
 import com.zl.weilu.androidut.ui.MainActivity;
 
@@ -24,7 +24,7 @@ import static org.assertj.android.api.Assertions.assertThat;
  * @Time: 2018/5/15 0015 10:33.
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 23)
+@Config(sdk = Build.VERSION_CODES.P)
 public class AssertJAndroidTest {
 
     private MainActivity mainActivity;

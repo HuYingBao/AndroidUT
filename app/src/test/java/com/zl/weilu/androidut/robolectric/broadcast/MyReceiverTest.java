@@ -2,9 +2,9 @@ package com.zl.weilu.androidut.robolectric.broadcast;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.preference.PreferenceManager;
 
-import com.zl.weilu.androidut.BuildConfig;
 import com.zl.weilu.androidut.broadcast.MyReceiver;
 
 import org.junit.Test;
@@ -23,7 +23,7 @@ import static org.junit.Assert.assertTrue;
  * @Time: 2017/12/4 11:25.
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 23)
+@Config(sdk = Build.VERSION_CODES.P)
 public class MyReceiverTest {
 
     private final String action = "com.zl.weilu.androidut";

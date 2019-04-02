@@ -20,6 +20,9 @@ import org.powermock.reflect.Whitebox;
 @PrepareForTest({Banana.class})
 public class PowerMockitoStaticMethodTest {
 
+    /**
+     * mock静态方法
+     */
     @Test
     public void testStaticMethod() {
         PowerMockito.mockStatic(Banana.class); //<-- mock静态类

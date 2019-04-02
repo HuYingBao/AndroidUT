@@ -19,16 +19,26 @@ import org.powermock.modules.junit4.PowerMockRunner;
 @PrepareForTest({Banana.class})
 public class PowerMockitoPrivateMethodTest {
 
+    /**
+     * 验证私有方法是否调用
+     *
+     * @throws Exception
+     */
     @Test
     public void testPrivateMethod() throws Exception {
         Banana mBanana = PowerMockito.mock(Banana.class);
+        //当mock对象的方法调用时,调用真实方法逻辑
         PowerMockito.when(mBanana.getBananaInfo()).thenCallRealMethod();
+        //当mock对象的private方法调用时,返回对应值
         PowerMockito.when(mBanana, "flavor").thenReturn("苦苦的");
         Assert.assertEquals("苦苦的黄色的", mBanana.getBananaInfo());
         //验证flavor是否调用了一次
         PowerMockito.verifyPrivate(mBanana).invoke("flavor");
     }
 
+    /**
+     * 跳过private方法调用
+     */
     @Test
     public void skipPrivateMethod() {
         Banana mBanana = new Banana();

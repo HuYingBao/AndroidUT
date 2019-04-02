@@ -1,6 +1,7 @@
 package com.zl.weilu.androidut.mvp;
 
-import com.zl.weilu.androidut.BuildConfig;
+import android.os.Build;
+
 import com.zl.weilu.androidut.mvp.ui.LoginMvpView;
 import com.zl.weilu.androidut.mvp.ui.LoginPresenter;
 import com.zl.weilu.androidut.rxjava.RxJavaTestSchedulerRule;
@@ -33,7 +34,7 @@ import static org.mockito.Mockito.verify;
  * Created by weilu on 2018/1/27.
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 23)
+@Config(sdk = Build.VERSION_CODES.P)
 public class LoginPresenterTest {
 
     private LoginPresenter mPresenter;
