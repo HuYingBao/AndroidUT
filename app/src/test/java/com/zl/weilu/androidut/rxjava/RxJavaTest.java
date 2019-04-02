@@ -135,7 +135,7 @@ public class RxJavaTest {
 
         //时间再经过2秒
         mTestScheduler.advanceTimeBy(2, TimeUnit.SECONDS);
-        testSubscriber.assertValues(0L, 1L, 2L, 3L ,4L);
+        testSubscriber.assertValues(0L, 1L, 2L, 3L, 4L);
         testSubscriber.assertValueCount(5);
         testSubscriber.assertNotTerminated();
 

@@ -32,7 +32,7 @@ public class ShadowTest {
     }
 
     @Test
-    public void testShadowShadow(){
+    public void testShadowShadow() {
         Person person = new Person();
         //实际上调用的是ShadowPerson的方法
         Log.d("test", person.getName());

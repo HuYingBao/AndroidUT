@@ -19,7 +19,7 @@ import org.robolectric.shadows.ShadowLog;
 import static org.assertj.android.api.Assertions.assertThat;
 
 /**
- * @Description: 
+ * @Description:
  * @Author: weilu
  * @Time: 2018/5/15 0015 10:33.
  */
@@ -33,7 +33,7 @@ public class AssertJAndroidTest {
     private CheckBox checkBox;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         //输出日志
         ShadowLog.stream = System.out;
         mainActivity = Robolectric.setupActivity(MainActivity.class);

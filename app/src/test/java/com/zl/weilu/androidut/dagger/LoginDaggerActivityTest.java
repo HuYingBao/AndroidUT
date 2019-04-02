@@ -50,7 +50,7 @@ public class LoginDaggerActivityTest {
     public RxJavaTestSchedulerRule rule = new RxJavaTestSchedulerRule();
 
     @Before
-    public void setUp(){
+    public void setUp() {
         ShadowLog.stream = System.out;
         loginActivity = Robolectric.setupActivity(LoginDaggerActivity.class);
         mTvSendIdentify = (TextView) loginActivity.findViewById(R.id.tv_send_identify);

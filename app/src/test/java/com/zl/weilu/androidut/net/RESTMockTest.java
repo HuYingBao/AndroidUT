@@ -43,11 +43,11 @@ public class RESTMockTest {
     public RxJavaRule rule = new RxJavaRule();
 
     @Before
-    public void setUp(){
+    public void setUp() {
         ShadowLog.stream = System.out;
         // 启动服务
         RESTMockServerStarter.startSync(new JVMFileParser());
-        
+
         //定义Http Client,并添加拦截器
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 .addInterceptor(new LoggingInterceptor())
@@ -69,7 +69,7 @@ public class RESTMockTest {
         RESTMockServer.whenGET(pathContains("users"))
 //                .delay(TimeUnit.SECONDS, 5) // 模拟响应时长
                 .thenReturnFile(200, "json/users.json");
-        
+
         mockGithubService.getUser("weilu")
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -103,7 +103,8 @@ public class RESTMockTest {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<User>() {
                     @Override
-                    public void onSubscribe(Disposable d) {}
+                    public void onSubscribe(Disposable d) {
+                    }
 
                     @Override
                     public void onNext(User user) {
@@ -117,7 +118,8 @@ public class RESTMockTest {
                     }
 
                     @Override
-                    public void onComplete() {}
+                    public void onComplete() {
+                    }
                 });
     }
 }

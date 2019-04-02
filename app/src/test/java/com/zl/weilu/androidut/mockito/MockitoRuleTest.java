@@ -18,15 +18,15 @@ import static org.junit.Assert.assertNotNull;
 
 public class MockitoRuleTest {
 
-    @Mock 
+    @Mock
     Person mPerson;
 
     @Rule
     public MockitoRule mockitoRule = MockitoJUnit.rule();
 
     @Test
-    public void testIsNotNull(){
+    public void testIsNotNull() {
         assertNotNull(mPerson);
     }
-   
+
 }

@@ -5,7 +5,7 @@ import com.zl.weilu.androidut.bean.Person;
 import org.junit.Test;
 
 import static org.junit.Assert.assertNotNull;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.mock;
 
 /**
  * @Description: 普通方法Mock
@@ -16,7 +16,7 @@ import static org.mockito.Mockito.*;
 public class MockitoTest {
 
     @Test
-    public void testIsNotNull(){
+    public void testIsNotNull() {
         Person mPerson = mock(Person.class); //<--使用mock方法
 
         assertNotNull(mPerson);

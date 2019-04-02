@@ -47,7 +47,7 @@ public class DateUtilTest {
     }
 
     @Test(expected = ParseException.class)
-    public void dateToStampTest1() throws Exception{
+    public void dateToStampTest1() throws Exception {
         DateUtil.dateToStamp("2017-10-15");
     }
 

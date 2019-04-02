@@ -27,15 +27,15 @@ public class PowerMockitoPrivateMethodTest {
         PowerMockito.when(mBanana, "flavor").thenReturn("苦苦的");
         Assert.assertEquals("苦苦的黄色的", mBanana.getBananaInfo());
         //验证flavor是否调用了一次
-        PowerMockito.verifyPrivate(mBanana).invoke("flavor"); 
+        PowerMockito.verifyPrivate(mBanana).invoke("flavor");
     }
 
     @Test
     public void skipPrivateMethod() {
         Banana mBanana = new Banana();
         //跳过flavor方法
-        PowerMockito.suppress(PowerMockito.method(Banana.class, "flavor")); 
-        Assert.assertEquals("null黄色的", mBanana.getBananaInfo()); 
+        PowerMockito.suppress(PowerMockito.method(Banana.class, "flavor"));
+        Assert.assertEquals("null黄色的", mBanana.getBananaInfo());
     }
 
     /**

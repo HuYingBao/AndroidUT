@@ -54,7 +54,7 @@ public class ResponseTest {
             }
         });
     }
-    
+
     @Test
     public void getUserTest() {
         GithubService.createGithubService()
@@ -63,7 +63,8 @@ public class ResponseTest {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<User>() {
                     @Override
-                    public void onSubscribe(Disposable d) {}
+                    public void onSubscribe(Disposable d) {
+                    }
 
                     @Override
                     public void onNext(User user) {
@@ -77,7 +78,8 @@ public class ResponseTest {
                     }
 
                     @Override
-                    public void onComplete() {}
+                    public void onComplete() {
+                    }
                 });
     }
 }

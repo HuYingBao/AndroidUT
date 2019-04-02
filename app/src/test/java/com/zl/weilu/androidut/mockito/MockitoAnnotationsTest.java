@@ -18,15 +18,15 @@ import static org.junit.Assert.assertNotNull;
 public class MockitoAnnotationsTest {
 
     @Mock //<--使用@Mock注解
-    Person mPerson;
+            Person mPerson;
 
     @Before
-    public void setup(){
+    public void setup() {
         MockitoAnnotations.initMocks(this); //<--初始化
     }
 
     @Test
-    public void testIsNotNull(){
+    public void testIsNotNull() {
         assertNotNull(mPerson);
     }
 

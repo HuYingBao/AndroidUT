@@ -31,7 +31,7 @@ public class DateFormatTest {
     }
 
     @Test(expected = ParseException.class)
-    public void dateToStampTest1() throws Exception{
+    public void dateToStampTest1() throws Exception {
         DateUtil.dateToStamp(time);
     }
 }

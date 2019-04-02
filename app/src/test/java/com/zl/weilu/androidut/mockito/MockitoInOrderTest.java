@@ -6,9 +6,10 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.mockito.InOrder;
 import org.mockito.Mock;
-import org.mockito.junit.*;
+import org.mockito.junit.MockitoJUnit;
+import org.mockito.junit.MockitoRule;
 
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.inOrder;
 
 /**
  * Created by weilu on 2017/11/5.
@@ -27,7 +28,7 @@ public class MockitoInOrderTest {
 
 
     @Test
-    public void testPersonInOrder(){
+    public void testPersonInOrder() {
 
         mPerson.setName("小明");
         mPerson.setSex(1);

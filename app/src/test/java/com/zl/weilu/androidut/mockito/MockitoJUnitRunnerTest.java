@@ -19,10 +19,10 @@ import static org.junit.Assert.assertNotNull;
 public class MockitoJUnitRunnerTest {
 
     @Mock //<--使用@Mock注解
-    Person mPerson;
+            Person mPerson;
 
     @Test
-    public void testIsNotNull(){
+    public void testIsNotNull() {
         assertNotNull(mPerson);
     }
 

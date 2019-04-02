@@ -25,8 +25,8 @@ import static org.junit.Assert.assertTrue;
 
 @RunWith(RobolectricTestRunner.class)
 @Config(constants = BuildConfig.class, sdk = 23)
-public class MyReceiverTest{
-    
+public class MyReceiverTest {
+
     private final String action = "com.zl.weilu.androidut";
 
     @Test
@@ -46,6 +46,6 @@ public class MyReceiverTest{
         myReceiver.onReceive(RuntimeEnvironment.application, intent);
         //验证广播的处理逻辑是否正确
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(RuntimeEnvironment.application);
-        assertEquals( "AndroidUT", preferences.getString(MyReceiver.NAME, ""));
+        assertEquals("AndroidUT", preferences.getString(MyReceiver.NAME, ""));
     }
 }

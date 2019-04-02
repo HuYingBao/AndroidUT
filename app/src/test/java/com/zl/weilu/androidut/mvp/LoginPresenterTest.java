@@ -1,9 +1,9 @@
 package com.zl.weilu.androidut.mvp;
 
 import com.zl.weilu.androidut.BuildConfig;
-import com.zl.weilu.androidut.rxjava.RxJavaTestSchedulerRule;
 import com.zl.weilu.androidut.mvp.ui.LoginMvpView;
 import com.zl.weilu.androidut.mvp.ui.LoginPresenter;
+import com.zl.weilu.androidut.rxjava.RxJavaTestSchedulerRule;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -34,7 +34,7 @@ import static org.mockito.Mockito.verify;
  */
 @RunWith(RobolectricTestRunner.class)
 @Config(constants = BuildConfig.class, sdk = 23)
-public class LoginPresenterTest{
+public class LoginPresenterTest {
 
     private LoginPresenter mPresenter;
 
@@ -48,7 +48,7 @@ public class LoginPresenterTest{
     public RxJavaTestSchedulerRule rule = new RxJavaTestSchedulerRule();
 
     @Before
-    public void setUp(){
+    public void setUp() {
         //输出日志
         ShadowLog.stream = System.out;
 

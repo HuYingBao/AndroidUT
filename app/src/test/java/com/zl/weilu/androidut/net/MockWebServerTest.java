@@ -45,7 +45,7 @@ public class MockWebServerTest {
     public RxJavaRule rule = new RxJavaRule();
 
     @Before
-    public void setUp(){
+    public void setUp() {
         ShadowLog.stream = System.out;
 
         // 创建一个 MockWebServer
@@ -56,7 +56,7 @@ public class MockWebServerTest {
             @Override
             public MockResponse dispatch(RecordedRequest request) throws InterruptedException {
 
-                if (request.getPath().equals("/users/simplezhli")){
+                if (request.getPath().equals("/users/simplezhli")) {
                     return new MockResponse()
                             .addHeader("Content-Type", "application/json;charset=utf-8")
                             .addHeader("Cache-Control", "no-cache")
@@ -75,7 +75,7 @@ public class MockWebServerTest {
 
         server.setDispatcher(dispatcher);
 
-          //默认返回http code是 200
+        //默认返回http code是 200
 //        MockResponse mockResponse = new MockResponse()
 //                .addHeader("Content-Type", "application/json;charset=utf-8")
 //                .addHeader("Cache-Control", "no-cache")

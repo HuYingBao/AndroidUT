@@ -22,7 +22,7 @@ import org.powermock.reflect.Whitebox;
 public class PowerMockitoStaticMethodTest {
 
     @Test
-    public void testStaticMethod() { 
+    public void testStaticMethod() {
         PowerMockito.mockStatic(Banana.class); //<-- mock静态类
         Mockito.when(Banana.getColor()).thenReturn("绿色");
         Assert.assertEquals("绿色", Banana.getColor());
@@ -32,7 +32,7 @@ public class PowerMockitoStaticMethodTest {
      * 更改类的私有static常量
      */
     @Test
-    public void testChangeColor() { 
+    public void testChangeColor() {
         Whitebox.setInternalState(Banana.class, "COLOR", "红色的");
         Assert.assertEquals("红色的", Banana.getColor());
     }

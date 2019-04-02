@@ -8,7 +8,13 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.after;
+import static org.mockito.Mockito.atLeast;
+import static org.mockito.Mockito.atMost;
+import static org.mockito.Mockito.reset;
+import static org.mockito.Mockito.timeout;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 /**
  * @Description: 常用验证方法示例
@@ -25,7 +31,7 @@ public class MockitoVerifyTest {
     public MockitoRule mockitoRule = MockitoJUnit.rule();
 
     @Test
-    public void testPersonVerifyAfter(){
+    public void testPersonVerifyAfter() {
         when(mPerson.getAge()).thenReturn(18);
         //延时1s验证
         System.out.println(mPerson.getAge());
@@ -37,7 +43,7 @@ public class MockitoVerifyTest {
     }
 
     @Test
-    public void testPersonVerifyAtLeast(){
+    public void testPersonVerifyAtLeast() {
         mPerson.getAge();
         mPerson.getAge();
         //至少验证2次
@@ -45,14 +51,15 @@ public class MockitoVerifyTest {
     }
 
     @Test
-    public void testPersonVerifyAtMost(){
+    public void testPersonVerifyAtMost() {
+        mPerson.getAge();
         mPerson.getAge();
         //至多验证2次
         verify(mPerson, atMost(2)).getAge();
     }
 
     @Test
-    public void testPersonVerifyTimes(){
+    public void testPersonVerifyTimes() {
         mPerson.getAge();
         mPerson.getAge();
         //验证方法在100ms超时前调用2次

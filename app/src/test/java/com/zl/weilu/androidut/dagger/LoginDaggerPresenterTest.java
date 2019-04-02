@@ -49,7 +49,7 @@ public class LoginDaggerPresenterTest {
     public RxJavaTestSchedulerRule rule = new RxJavaTestSchedulerRule();
 
     @Before
-    public void setUp(){
+    public void setUp() {
         //输出日志
         ShadowLog.stream = System.out;
 

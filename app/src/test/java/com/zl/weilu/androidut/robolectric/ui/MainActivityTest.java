@@ -56,7 +56,7 @@ public class MainActivityTest {
     private CheckBox checkBox;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         //输出日志
         ShadowLog.stream = System.out;
         // 默认会调用Activity的生命周期: onCreate->onStart->onResume
@@ -89,7 +89,7 @@ public class MainActivityTest {
     public void testJump() throws Exception {
 
         Assert.assertEquals(mJumpBtn.getText().toString(), "Activity跳转");
-        
+
         // 触发按钮点击
         mJumpBtn.performClick();
 

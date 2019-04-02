@@ -18,7 +18,8 @@ import org.robolectric.annotation.Config;
 
 import java.util.concurrent.TimeUnit;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 /**
  * @Description: 测试LoginActivity
@@ -36,7 +37,7 @@ public class LoginActivityTest {
     public RxJavaTestSchedulerRule rule = new RxJavaTestSchedulerRule();
 
     @Before
-    public void setUp(){
+    public void setUp() {
         loginActivity = Robolectric.setupActivity(LoginActivity.class);
         mTvSendIdentify = (TextView) loginActivity.findViewById(R.id.tv_send_identify);
     }

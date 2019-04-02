@@ -7,8 +7,12 @@ import org.junit.Test;
 import java.util.Date;
 import java.util.Map;
 
-import static org.assertj.core.api.Java6Assertions.*;
-import static org.assertj.core.util.DateUtil.*;
+import static org.assertj.core.api.Java6Assertions.assertThat;
+import static org.assertj.core.api.Java6Assertions.atIndex;
+import static org.assertj.core.api.Java6Assertions.entry;
+import static org.assertj.core.util.DateUtil.now;
+import static org.assertj.core.util.DateUtil.parse;
+import static org.assertj.core.util.DateUtil.parseDatetimeWithMs;
 import static org.assertj.core.util.Lists.newArrayList;
 
 /**
@@ -19,7 +23,7 @@ import static org.assertj.core.util.Lists.newArrayList;
 public class AssertJTest {
 
     @Test
-    public void testString(){
+    public void testString() {
         String str = null;
         // 断言null或者为空字符串
         assertThat(str).isNullOrEmpty();
@@ -135,5 +139,5 @@ public class AssertJTest {
         // 断言 map 包含value  
         assertThat(foo).containsValue(3);
     }
-    
+
 }

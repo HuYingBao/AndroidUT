@@ -23,7 +23,7 @@ public class MockitoSpyTest {
 
     @Spy
     Person mPerson;
-    
+
     @InjectMocks
     Home mHome;
 
@@ -31,18 +31,18 @@ public class MockitoSpyTest {
     public MockitoRule mockitoRule = MockitoJUnit.rule();
 
     @Test
-    public void testIsNotNull(){
+    public void testIsNotNull() {
         assertNotNull(mPerson);
     }
 
     @Test
-    public void testPersonSpy(){
+    public void testPersonSpy() {
         //输出11
         System.out.print(mPerson.getAge());
     }
 
     @Test
-    public void testHomeInjectMocks(){
+    public void testHomeInjectMocks() {
         when(mPerson.getName()).thenReturn("weilu");
         System.out.print(mHome.getMaster());
     }

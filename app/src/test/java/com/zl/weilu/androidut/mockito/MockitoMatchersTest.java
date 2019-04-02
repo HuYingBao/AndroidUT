@@ -9,7 +9,10 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.any;
+import static org.mockito.Mockito.argThat;
+import static org.mockito.Mockito.contains;
+import static org.mockito.Mockito.when;
 
 /**
  * @Description: 常用参数匹配器示例
@@ -26,7 +29,7 @@ public class MockitoMatchersTest {
     public MockitoRule mockitoRule = MockitoJUnit.rule();
 
     @Test
-    public void testPersonAny(){
+    public void testPersonAny() {
         when(mPerson.eat(any(String.class))).thenReturn("米饭");
         //或
         //when(mPerson.eat(anyString())).thenReturn("米饭");
@@ -38,7 +41,7 @@ public class MockitoMatchersTest {
 
 
     @Test
-    public void testPersonContains(){
+    public void testPersonContains() {
 
         when(mPerson.eat(contains("面"))).thenReturn("面条");
         //输出面条
@@ -47,7 +50,7 @@ public class MockitoMatchersTest {
     }
 
     @Test
-    public void testPersonArgThat(){
+    public void testPersonArgThat() {
 
         //自定义输入字符长度为偶数时，输出面条。
         when(mPerson.eat(argThat(new ArgumentMatcher<String>() {
@@ -57,7 +60,7 @@ public class MockitoMatchersTest {
             }
         }))).thenReturn("面条");
         //输出面条
-        System.out.println(mPerson.eat("1234"));
+        System.out.println(mPerson.eat("1232"));
 
     }
 

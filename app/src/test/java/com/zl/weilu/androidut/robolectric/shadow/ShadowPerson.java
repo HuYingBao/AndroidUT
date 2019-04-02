@@ -7,6 +7,7 @@ import org.robolectric.annotation.Implements;
 
 /**
  * {@link Person} 的影子类
+ *
  * @Description: 自定义Shadow
  * @Author: weilu
  * @Time: 2017/12/4 13:05.
@@ -18,14 +19,14 @@ public class ShadowPerson {
     public String getName() {
         return "AndroidUT";
     }
-    
+
     @Implementation
     public int getSex() {
         return 0;
     }
-    
+
     @Implementation
-    public int getAge(){
+    public int getAge() {
         return 18;
     }
 }

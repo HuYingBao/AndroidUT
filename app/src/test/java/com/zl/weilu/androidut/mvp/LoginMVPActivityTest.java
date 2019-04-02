@@ -6,8 +6,8 @@ import android.widget.TextView;
 
 import com.zl.weilu.androidut.BuildConfig;
 import com.zl.weilu.androidut.R;
-import com.zl.weilu.androidut.rxjava.RxJavaTestSchedulerRule;
 import com.zl.weilu.androidut.mvp.ui.LoginMVPActivity;
+import com.zl.weilu.androidut.rxjava.RxJavaTestSchedulerRule;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -29,7 +29,8 @@ import io.reactivex.functions.Function;
 import io.reactivex.plugins.RxJavaPlugins;
 import io.reactivex.schedulers.Schedulers;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 
 /**
@@ -49,7 +50,7 @@ public class LoginMVPActivityTest {
     public RxJavaTestSchedulerRule rule = new RxJavaTestSchedulerRule();
 
     @Before
-    public void setUp(){
+    public void setUp() {
         ShadowLog.stream = System.out;
         loginActivity = Robolectric.setupActivity(LoginMVPActivity.class);
         mTvSendIdentify = (TextView) loginActivity.findViewById(R.id.tv_send_identify);
