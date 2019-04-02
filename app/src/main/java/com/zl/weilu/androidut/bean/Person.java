@@ -5,9 +5,8 @@ package com.zl.weilu.androidut.bean;
  * @Author: weilu
  * @Time: 2017/11/4 10:45.
  */
-
 public class Person {
-    
+
     private String name;
     private int sex;
 
@@ -26,12 +25,12 @@ public class Person {
     public void setSex(int sex) {
         this.sex = sex;
     }
-    
-    public int getAge(){
+
+    public int getAge() {
         return 11;
     }
-    
-    public String eat(String food){
+
+    public String eat(String food) {
         return food;
     }
 }

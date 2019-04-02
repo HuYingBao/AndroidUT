@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         checkbox = (CheckBox) this.findViewById(R.id.checkbox);
     }
 
-    public void jump(View view){
+    public void jump(View view) {
 
         startActivity(new Intent(this, LoginActivity.class));
 
@@ -34,11 +34,11 @@ public class MainActivity extends AppCompatActivity {
 //        startActivity(new Intent(this, LoginDaggerActivity.class));
     }
 
-    public void showToast(View view){
-        Toast.makeText(this,"Hello UT!",Toast.LENGTH_LONG).show();
+    public void showToast(View view) {
+        Toast.makeText(this, "Hello UT!", Toast.LENGTH_LONG).show();
     }
 
-    public void showDialog(View view){
+    public void showDialog(View view) {
         AlertDialog alertDialog = new AlertDialog.Builder(this)
                 .setMessage("Hello UT！")
                 .setTitle("提示")
@@ -46,11 +46,11 @@ public class MainActivity extends AppCompatActivity {
         alertDialog.show();
     }
 
-    public void inverse(View view){
+    public void inverse(View view) {
         checkbox.setChecked(!checkbox.isChecked());
     }
 
-    public String getLifecycleState(){
+    public String getLifecycleState() {
         return lifecycle;
     }
 

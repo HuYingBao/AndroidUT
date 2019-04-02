@@ -19,7 +19,6 @@ import static org.mockito.Mockito.when;
  * @Author: weilu
  * @Time: 2017/11/4 18:32.
  */
-
 public class MockitoMatchersTest {
 
     @Mock

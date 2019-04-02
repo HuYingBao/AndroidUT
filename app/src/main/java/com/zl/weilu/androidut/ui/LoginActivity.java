@@ -48,7 +48,8 @@ public class LoginActivity extends AppCompatActivity {
                     }
 
                     @Override
-                    public void onError(Throwable e) {}
+                    public void onError(Throwable e) {
+                    }
 
                     @Override
                     public void onNext(Long aLong) {
@@ -56,10 +57,11 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
     }
+
     @Override
     public void onDestroy() {
         super.onDestroy();
-        if (mDisposable != null){
+        if (mDisposable != null) {
             mDisposable.dispose();
         }
     }

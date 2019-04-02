@@ -6,7 +6,6 @@ import java.lang.ref.WeakReference;
 /**
  * Created by weilu on 2018/1/27.
  */
-
 public abstract class BaseMVPPresenter<T extends MvpView> {
 
     /**
@@ -19,18 +18,19 @@ public abstract class BaseMVPPresenter<T extends MvpView> {
     /**
      * 建立关联
      */
-    public void attachView(T view){
+    public void attachView(T view) {
         mViewRef = new WeakReference<>(view);
-        if(isViewAttached()) {
+        if (isViewAttached()) {
             mMvpView = getView();
         }
     }
 
     /**
      * 获取View
+     *
      * @return View
      */
-    public T getView(){
+    public T getView() {
         return mViewRef.get();
     }
 
@@ -42,15 +42,15 @@ public abstract class BaseMVPPresenter<T extends MvpView> {
      *
      * @return boolean
      */
-    public boolean isViewAttached(){
+    public boolean isViewAttached() {
         return mViewRef != null && mViewRef.get() != null;
     }
 
     /**
      * 解除关联
      */
-    public void detachView(){
-        if( mViewRef != null){
+    public void detachView() {
+        if (mViewRef != null) {
             mViewRef.clear();
             mViewRef = null;
         }

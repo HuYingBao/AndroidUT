@@ -33,7 +33,6 @@ import static org.junit.Assert.assertEquals;
 /**
  * Created by weilu on 2017/12/23.
  */
-
 @RunWith(RobolectricTestRunner.class)
 @Config(constants = BuildConfig.class, sdk = 23)
 public class MockWebServerTest {

@@ -22,7 +22,6 @@ import static org.junit.Assert.assertTrue;
  * @Author: weilu
  * @Time: 2017/12/4 11:25.
  */
-
 @RunWith(RobolectricTestRunner.class)
 @Config(constants = BuildConfig.class, sdk = 23)
 public class MyReceiverTest {

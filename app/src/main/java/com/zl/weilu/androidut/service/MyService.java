@@ -15,7 +15,7 @@ import androidx.annotation.Nullable;
 public class MyService extends Service {
 
     private final String TAG = "MyService";
-    
+
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {

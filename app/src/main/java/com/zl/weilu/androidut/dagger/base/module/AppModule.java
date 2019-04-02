@@ -13,7 +13,6 @@ import dagger.Provides;
  * @author weilu
  * 作者：weilu on 2018/2/5 15:20
  */
-
 @Module
 public class AppModule {
 

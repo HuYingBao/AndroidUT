@@ -14,22 +14,21 @@ import dagger.android.support.DaggerApplication;
 /**
  * Created by weilu on 2017/12/3.
  */
-
 public class MyApp extends DaggerApplication {
-    
+
     private static MyApp instance;
 
     @Inject
     GithubApi mGithubApi;
-    
+
     @Override
     public void onCreate() {
         super.onCreate();
 
-        if (instance == null){
+        if (instance == null) {
             instance = this;
         }
-        
+
         LogConfiguration config = new LogConfiguration.Builder()
                 .logLevel(BuildConfig.DEBUG ? LogLevel.ALL : LogLevel.NONE)
                 .build();
@@ -40,7 +39,7 @@ public class MyApp extends DaggerApplication {
         return instance;
     }
 
-    public GithubApi getGithubApi(){
+    public GithubApi getGithubApi() {
         return mGithubApi;
     }
 

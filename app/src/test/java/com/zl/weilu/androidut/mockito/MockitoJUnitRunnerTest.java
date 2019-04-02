@@ -14,7 +14,6 @@ import static org.junit.Assert.assertNotNull;
  * @Author: weilu
  * @Time: 2017/11/4 0004 10:50.
  */
-
 @RunWith(MockitoJUnitRunner.class) //<--使用MockitoJUnitRunner
 public class MockitoJUnitRunnerTest {
 

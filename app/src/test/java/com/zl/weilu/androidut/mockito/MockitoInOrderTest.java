@@ -14,7 +14,6 @@ import static org.mockito.Mockito.inOrder;
 /**
  * Created by weilu on 2017/11/5.
  */
-
 public class MockitoInOrderTest {
 
     @Mock

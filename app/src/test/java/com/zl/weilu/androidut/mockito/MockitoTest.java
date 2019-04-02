@@ -12,7 +12,6 @@ import static org.mockito.Mockito.mock;
  * @Author: weilu
  * @Time: 2017/11/4 10:44.
  */
-
 public class MockitoTest {
 
     @Test

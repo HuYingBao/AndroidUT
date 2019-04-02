@@ -21,18 +21,18 @@ public abstract class BaseMVPDaggerActivity<V extends MvpView, T extends BaseMVP
     @Inject
     protected T mPresenter;
     public ProgressDialog mProgress;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mPresenter.attachView((V)this);
+        mPresenter.attachView((V) this);
         mProgress = new ProgressDialog(this);
         mProgress.setMessage("加载中...");
     }
 
     @Override
     protected void onDestroy() {
-        if (mPresenter != null){
+        if (mPresenter != null) {
             mPresenter.detachView();
         }
         super.onDestroy();
@@ -45,7 +45,7 @@ public abstract class BaseMVPDaggerActivity<V extends MvpView, T extends BaseMVP
 
     @Override
     public void showProgress() {
-        if (mProgress != null && !mProgress.isShowing()){
+        if (mProgress != null && !mProgress.isShowing()) {
             mProgress.show();
         }
     }

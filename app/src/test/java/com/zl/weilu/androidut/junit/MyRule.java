@@ -7,7 +7,6 @@ import org.junit.runners.model.Statement;
 /**
  * 作者：weilu on 2017/10/16 13:23
  */
-
 public class MyRule implements TestRule {
 
     @Override

@@ -21,7 +21,6 @@ import static org.mockito.Mockito.when;
  * @Author: weilu
  * @Time: 2017/11/4 11:51.
  */
-
 public class MockitoVerifyTest {
 
     @Mock

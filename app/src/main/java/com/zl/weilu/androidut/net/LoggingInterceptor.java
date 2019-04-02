@@ -18,7 +18,6 @@ import okhttp3.Response;
  * 日志信息采集类
  * 有一个地方需要注意一下，在调用了response.body().string()方法之后，
  * response中的流会被关闭，我们需要创建出一个新的response给应用层处理
- *
  */
 public class LoggingInterceptor implements Interceptor {
 
@@ -34,9 +33,9 @@ public class LoggingInterceptor implements Interceptor {
         XLog.d("----------Start----------------");
         XLog.d("| RequestUrl:" + request.url());
         XLog.d("| RequestHeaders:\n" + request.headers());
-        
+
         String method = request.method();
-        if("POST".equals(method)){
+        if ("POST".equals(method)) {
             StringBuilder sb = new StringBuilder();
             if (request.body() instanceof FormBody) {
                 FormBody body = (FormBody) request.body();
@@ -44,7 +43,7 @@ public class LoggingInterceptor implements Interceptor {
                     sb.append(body.encodedName(i) + ":" + (TextUtils.isEmpty(body.encodedValue(i)) ?
                             "参数为空" : URLDecoder.decode(body.encodedValue(i), "utf-8")) + ",");
                 }
-                if (sb.length() != 0){
+                if (sb.length() != 0) {
                     sb.delete(sb.length() - 1, sb.length());
                 }
                 XLog.d("| RequestParams:\n");

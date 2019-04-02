@@ -13,7 +13,6 @@ import io.reactivex.schedulers.TestScheduler;
 /**
  * Created by weilu on 2018/1/6..
  */
-
 public class RxJavaTestSchedulerRule implements TestRule {
 
     private final TestScheduler mTestScheduler = new TestScheduler();

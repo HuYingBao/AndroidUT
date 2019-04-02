@@ -7,7 +7,7 @@ import java.util.Locale;
 
 /**
  * 日期操作工具类.
- *
+ * <p>
  * 作者：weilu on 2017/1/21 13:14
  */
 public class DateUtil {
@@ -23,7 +23,7 @@ public class DateUtil {
      * @param time
      * @return 时间戳
      */
-    public static long dateToStamp(String time) throws ParseException{
+    public static long dateToStamp(String time) throws ParseException {
         SimpleDateFormat sdr = new SimpleDateFormat(FORMAT_YMDHMS, Locale.CHINA);
         Date date = sdr.parse(time);
         return date.getTime();
@@ -32,7 +32,7 @@ public class DateUtil {
     /**
      * 将时间戳转换为时间
      */
-    public static String stampToDate(long lt){
+    public static String stampToDate(long lt) {
         String res;
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(FORMAT_YMDHMS, Locale.CHINA);
         Date date = new Date(lt);

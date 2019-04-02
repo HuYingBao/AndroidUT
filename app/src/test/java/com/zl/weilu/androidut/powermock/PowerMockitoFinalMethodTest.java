@@ -14,7 +14,6 @@ import org.powermock.modules.junit4.PowerMockRunner;
  * @Author: weilu
  * @Time: 2017/11/18 11:33.
  */
-
 @RunWith(PowerMockRunner.class)
 public class PowerMockitoFinalMethodTest {
 

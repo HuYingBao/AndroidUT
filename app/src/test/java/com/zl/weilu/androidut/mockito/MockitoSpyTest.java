@@ -18,7 +18,6 @@ import static org.mockito.Mockito.when;
  * @Author: weilu
  * @Time: 2017/11/4 19:12.
  */
-
 public class MockitoSpyTest {
 
     @Spy

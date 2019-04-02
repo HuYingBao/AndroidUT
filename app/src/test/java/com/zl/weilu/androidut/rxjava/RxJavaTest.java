@@ -15,7 +15,6 @@ import io.reactivex.subscribers.TestSubscriber;
 /**
  * Created by weilu on 2018/1/5.
  */
-
 public class RxJavaTest {
 
     private TestScheduler mTestScheduler;

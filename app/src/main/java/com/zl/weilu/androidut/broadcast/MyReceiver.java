@@ -14,7 +14,7 @@ import android.preference.PreferenceManager;
 public class MyReceiver extends BroadcastReceiver {
 
     public static final String NAME = "name";
-    
+
     @Override
     public void onReceive(Context context, Intent intent) {
         SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(context).edit();

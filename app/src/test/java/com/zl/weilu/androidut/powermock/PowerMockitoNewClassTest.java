@@ -14,7 +14,6 @@ import org.powermock.modules.junit4.rule.PowerMockRule;
  * @Author: weilu
  * @Time: 2017/11/18 19:30.
  */
-
 public class PowerMockitoNewClassTest {
 
     @Rule

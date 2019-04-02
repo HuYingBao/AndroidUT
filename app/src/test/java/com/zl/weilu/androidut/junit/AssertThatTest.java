@@ -13,7 +13,6 @@ import static org.junit.Assert.assertThat;
 /**
  * Created by weilu on 2017/10/15.
  */
-
 public class AssertThatTest {
 
     @Rule

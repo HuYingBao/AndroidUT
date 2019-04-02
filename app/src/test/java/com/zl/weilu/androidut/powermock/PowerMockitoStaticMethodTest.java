@@ -16,7 +16,6 @@ import org.powermock.reflect.Whitebox;
  * @Author: weilu
  * @Time: 2017/11/18 11:12.
  */
-
 @RunWith(PowerMockRunner.class)
 @PrepareForTest({Banana.class})
 public class PowerMockitoStaticMethodTest {

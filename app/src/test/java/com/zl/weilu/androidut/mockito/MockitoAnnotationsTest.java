@@ -14,7 +14,6 @@ import static org.junit.Assert.assertNotNull;
  * @Author: weilu
  * @Time: 2017/11/4 10:47.
  */
-
 public class MockitoAnnotationsTest {
 
     @Mock //<--使用@Mock注解

@@ -23,7 +23,7 @@ public class GithubService {
         return retrofit.create(GithubApi.class);
     }
 
-    private static OkHttpClient getOkHttpClient(){
+    private static OkHttpClient getOkHttpClient() {
         return new OkHttpClient.Builder()
                 .addInterceptor(new LoggingInterceptor())
                 .build();

@@ -32,7 +32,6 @@ import static org.junit.Assert.assertEquals;
 /**
  * Created by weilu on 2018/5/14.
  */
-
 @RunWith(RobolectricTestRunner.class)
 @Config(constants = BuildConfig.class, sdk = 23)
 public class RESTMockTest {

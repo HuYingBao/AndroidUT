@@ -9,7 +9,7 @@ import android.widget.TextView;
 import com.zl.weilu.androidut.R;
 import com.zl.weilu.androidut.mvp.base.BaseMVPActivity;
 
-public class LoginMVPActivity extends BaseMVPActivity<LoginMvpView, LoginPresenter> implements LoginMvpView, View.OnClickListener{
+public class LoginMVPActivity extends BaseMVPActivity<LoginMvpView, LoginPresenter> implements LoginMvpView, View.OnClickListener {
 
     private TextView mTvSendIdentify;
     private EditText mEtMobile;
@@ -51,7 +51,7 @@ public class LoginMVPActivity extends BaseMVPActivity<LoginMvpView, LoginPresent
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.tv_send_identify:
                 mTvSendIdentify.setEnabled(false);
                 mPresenter.getIdentify();

@@ -15,7 +15,6 @@ import static org.junit.Assert.assertNotNull;
  * @Author: weilu
  * @Time: 2017/11/4 14:43.
  */
-
 public class MockitoRuleTest {
 
     @Mock

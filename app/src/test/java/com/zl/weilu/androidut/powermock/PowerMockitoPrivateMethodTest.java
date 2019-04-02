@@ -15,7 +15,6 @@ import org.powermock.modules.junit4.PowerMockRunner;
  * @Author: weilu
  * @Time: 2017/11/18 11:20.
  */
-
 @RunWith(PowerMockRunner.class)
 @PrepareForTest({Banana.class})
 public class PowerMockitoPrivateMethodTest {

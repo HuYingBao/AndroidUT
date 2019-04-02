@@ -10,8 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 /**
  * Created by weilu on 2018/1/27.
  */
-
-public abstract class BaseMVPActivity<V extends MvpView, T extends BaseMVPPresenter<V>> extends AppCompatActivity implements MvpView{
+public abstract class BaseMVPActivity<V extends MvpView, T extends BaseMVPPresenter<V>> extends AppCompatActivity implements MvpView {
 
     /**
      * Presenter对象
@@ -23,14 +22,14 @@ public abstract class BaseMVPActivity<V extends MvpView, T extends BaseMVPPresen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mPresenter = createPresenter();
-        mPresenter.attachView((V)this);
+        mPresenter.attachView((V) this);
         mProgress = new ProgressDialog(this);
         mProgress.setMessage("加载中...");
     }
 
     @Override
     protected void onDestroy() {
-        if (mPresenter != null){
+        if (mPresenter != null) {
             mPresenter.detachView();
         }
         super.onDestroy();
@@ -39,13 +38,14 @@ public abstract class BaseMVPActivity<V extends MvpView, T extends BaseMVPPresen
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        if (mPresenter == null){
+        if (mPresenter == null) {
             mPresenter = createPresenter();
         }
     }
 
     /**
      * 创建Presenter对象
+     *
      * @return Presenter对象
      */
     protected abstract T createPresenter();
@@ -57,7 +57,7 @@ public abstract class BaseMVPActivity<V extends MvpView, T extends BaseMVPPresen
 
     @Override
     public void showProgress() {
-        if (mProgress != null && !mProgress.isShowing()){
+        if (mProgress != null && !mProgress.isShowing()) {
             mProgress.show();
         }
     }

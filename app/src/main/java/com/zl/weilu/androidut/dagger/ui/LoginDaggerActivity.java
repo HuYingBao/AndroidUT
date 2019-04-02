@@ -10,12 +10,12 @@ import com.zl.weilu.androidut.R;
 import com.zl.weilu.androidut.dagger.base.BaseMVPDaggerActivity;
 import com.zl.weilu.androidut.mvp.ui.LoginMvpView;
 
-public class LoginDaggerActivity extends BaseMVPDaggerActivity<LoginMvpView, LoginDaggerPresenter> implements LoginMvpView, View.OnClickListener{
+public class LoginDaggerActivity extends BaseMVPDaggerActivity<LoginMvpView, LoginDaggerPresenter> implements LoginMvpView, View.OnClickListener {
 
     private TextView mTvSendIdentify;
     private EditText mEtMobile;
     private EditText mEtIdentify;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +47,7 @@ public class LoginDaggerActivity extends BaseMVPDaggerActivity<LoginMvpView, Log
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.tv_send_identify:
                 mTvSendIdentify.setEnabled(false);
                 mPresenter.getIdentify();

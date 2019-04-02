@@ -13,7 +13,6 @@ import io.reactivex.schedulers.Schedulers;
 /**
  * Created by weilu on 2017/12/23.
  */
-
 public class RxJavaRule implements TestRule {
 
     @Override
